@@ -1,7 +1,7 @@
 package hello;
 
 import hello.domain.Pizza;
-import hello.domain.CadeauRepository;
+import hello.domain.PizzaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class ChezPepe implements CommandLineRunner {
 
     @Autowired
-    private CadeauRepository pizzaRepository;
+    private PizzaRepository pizzaRepository;
 
     @Override
     public void run(String... strings) throws Exception {

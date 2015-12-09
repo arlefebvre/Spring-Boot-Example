@@ -5,6 +5,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.TestRestTemplate;
 import org.springframework.boot.test.WebIntegrationTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.client.RestTemplate;
@@ -26,7 +27,7 @@ public class MyFirstBootAppTest {
     @Test
     public void integrationTest(){
         String url = "http://localhost:"+port+"/";
-        String body = new RestTemplate().getForObject(url,String.class);
+        String body = new TestRestTemplate("user","user").getForObject(url,String.class);
         assertEquals(body, "Bonjour la communauté");
     }
 }
