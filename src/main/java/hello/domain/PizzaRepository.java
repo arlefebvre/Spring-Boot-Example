@@ -7,7 +7,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 /**
  * Created by Arthur on 09/12/2015.
  */
-public interface CadeauRepository extends CrudRepository<Pizza,Long> {
+public interface PizzaRepository extends CrudRepository<Pizza,Long> {
     @RestResource(path = "by-nom")
     Pizza findByNom(@Param("id") String nom);
 }

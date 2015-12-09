@@ -15,21 +15,22 @@ import static org.junit.Assert.assertNotNull;
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = MyFirstBootApp.class)
 public class PizzaRepositoryTest {
+
     @Autowired
-    private CadeauRepository cadeauRepository;
+    private PizzaRepository pizzaRepository;
 
     /*
     @org.junit.Before
     public void pereNoel(){
-        cadeauRepository.save(new Pizza("Orange"));
-        cadeauRepository.save(new Pizza("TV"));
-        cadeauRepository.save(new Pizza("PS4"));
+        pizzaRepository.save(new Pizza("Orange"));
+        pizzaRepository.save(new Pizza("TV"));
+        pizzaRepository.save(new Pizza("PS4"));
     }
     */
 
     @Test
     public void findByNomTest(){
-        Pizza c = cadeauRepository.findByNom("Royale");
+        Pizza c = pizzaRepository.findByNom("Royale");
         assertNotNull(c);
     }
 }
